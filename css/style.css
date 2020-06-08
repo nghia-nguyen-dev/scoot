@@ -16,6 +16,8 @@
     --main-side-padding: 165px;
     --btn-padding: 14px 40px;
 
+    --h2-font-size: 24px;
+
 }
 
 
@@ -24,6 +26,8 @@ body {
     font-size: .9375rem;
     line-height: 25px;
     color: var(--body-text-color);
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 a {
@@ -62,11 +66,18 @@ nav {
     width: max-content;
 }
 
+main {
+    width: 100%;
+    overflow: hidden;
+}
+
 .hero {
     color: white;
     background-image: url(../assets/images/home-hero-desktop.jpg);
     height: 650px;
     padding: 153px var(--main-side-padding);
+    position: relative;
+   
 }
 
 .hero .content {
@@ -82,4 +93,47 @@ h1 {
     font-size: 56px;
     letter-spacing: -2.5px;
     line-height: 56px;
+}
+
+.graphic-elements {
+    display: flex;
+    position: absolute;
+    left: 0;
+    bottom: 164px;
+  
+}
+
+.arrow-line {
+    display: flex;
+    width: 1160px;
+    justify-content: space-between;
+    margin-right: 95px;
+}
+
+.white-circles {
+    height: max-content;
+    align-self: end;
+    margin-bottom: 1rem;
+}
+
+.shifted-text-block {
+    margin-left: 95px;
+}
+
+.white-circles {
+    align-self: end;
+    margin-bottom: 1rem;
+}
+
+.three-step-process {
+    padding: 160px var(--main-side-padding) 200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+h2 {
+    font-family: 'Space Mono', Helvetica, sans-serif;
+    font-size: var(--h2-font-size);
+    
 }
