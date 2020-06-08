@@ -1,0 +1,76 @@
+:root {
+
+    /* main colors */
+    --yellow: #FCB72B;
+    --dark-navy: #495567;
+    --dim-grey: #939CAA;
+    --light-grey: #E5ECF4;
+    --snow: #F2F5F9;
+    --light-yellow: #FFF4DF;
+
+    /* text color */
+    --body-text-color: var(--dim-grey);
+    --heading-text-color: var(--dark-navy);
+
+    /* padding and margins */
+    --main-side-padding: 165px;
+    --btn-padding: 14px 40px;
+
+}
+
+
+body {
+    font-family: 'Lexend Deca';
+    font-size: .9375rem;
+    color: var(--body-text-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--dim-grey);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.375rem var(--main-side-padding);
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    margin-right: 65px;
+}
+
+.nav-list {
+    display: flex;
+}
+
+.nav-list li {
+    margin-right: 2rem;
+}
+
+.btn {
+    background-color: var(--yellow);
+    padding: var(--btn-padding);
+    color: white;
+    width: max-content;
+}
+
+.hero {
+    color: white;
+    background-image: url(../assets/images/home-hero-desktop.jpg);
+    height: 650px;
+    padding: 153px var(--main-side-padding);
+}
+
+h1 {
+    font-family: 'Space Mono';
+    font-size: 56px;
+    letter-spacing: -2.5px;
+    line-height: 56px;
+}
