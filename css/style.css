@@ -20,8 +20,9 @@
 
 
 body {
-    font-family: 'Lexend Deca';
+    font-family: 'Lexend Deca', Helvetica, sans-serif;
     font-size: .9375rem;
+    line-height: 25px;
     color: var(--body-text-color);
 }
 
@@ -68,8 +69,16 @@ nav {
     padding: 153px var(--main-side-padding);
 }
 
+.hero .content {
+    width: 500px;
+}
+
+.hero p {
+    margin: 40px 0;
+}
+
 h1 {
-    font-family: 'Space Mono';
+    font-family: 'Space Mono', Helvetica, sans-serif;
     font-size: 56px;
     letter-spacing: -2.5px;
     line-height: 56px;
