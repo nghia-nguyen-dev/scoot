@@ -14,7 +14,7 @@
     --heading-text-color: var(--dark-navy);
 
     /* padding and margins */
-    --main-side-padding: 165px;
+    --main-side-padding: 10vw;
     --btn-padding: 14px 40px;
 
     --max-width: 1440px;
@@ -43,6 +43,50 @@
     border-radius: 50%;
 }
 
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 160px;
+}
+
+
+/* ------------------------------- shared styles ------------------------------- */
+
+.telemetry .content-block,
+.city .content-block,
+.payments .content-block {
+    width: 445px;
+}
+
+.telemetry .content-block,
+.payments .content-block {
+    margin-right: 30px;
+}
+
+.inner-hero,
+.inner-sign-up,
+.steps,
+.telemetry,
+.city,
+.payments {
+    max-width: calc(var(--max-width) - (var(--main-side-padding) * 2));
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.inner-footer,
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.375rem var(--main-side-padding);
+    align-items: center;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+
+
 /* ------------------------------- base style ------------------------------- */
 
 body {
@@ -62,14 +106,7 @@ a {
 
 /* ------------------------------- header ------------------------------- */
 
-header {
-    display: flex;
-    justify-content: space-between;
-    padding: 1.375rem var(--main-side-padding);
-    align-items: center;
-    max-width: var(--max-width);
-    margin: 0 auto;
-}
+
 
 nav {
     display: flex;
@@ -97,12 +134,10 @@ nav {
     background-position: right top;
     background-size: cover;
     padding: 152px var(--main-side-padding);
+  
 }
 
-.inner-hero {
-    max-width: calc(var(--max-width) - (var(--main-side-padding) * 2));
-    margin: 0 auto;
-}
+
 
 h1 {
     font-family: 'Space Mono', sans-serif;
@@ -133,6 +168,7 @@ h1 {
 
 .process {
     padding: 160px var(--main-side-padding) 200px;
+    
 }
 
 
@@ -142,6 +178,7 @@ h1 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
+    margin-bottom: 200px;
 }
 
 h3 {
@@ -154,9 +191,7 @@ h3 {
 /* ------------------------------- telemetry sect ------------------------------- */
 
 .telemetry {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+ 
 }
 
 h2 {
@@ -167,6 +202,61 @@ h2 {
     color: var(--dark-navy);
 }
 
-.telemetry .content-block {
-    width: 445px;
+
+/* ------------------------------- city sect ------------------------------- */
+
+.city .bg-circle-img {
+    order: -1;
+    margin-right: 30px;
+}
+
+
+/* ------------------------------- payments sect ------------------------------- */
+
+.payments.flex-container {
+    margin-bottom: 0;
+}
+
+
+/* ------------------------------- sign-up sect ------------------------------- */
+
+.sign-up {
+    background-color: var(--dark-navy);
+    padding: 102px var(--main-side-padding);
+  
+}
+
+.inner-sign-up {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sign-up h2 {
+    color: white;
+    width: 415px;
+}
+
+.products img:nth-of-type(1) {
+    margin-right: 15px;
+}
+
+
+/* ------------------------------- footer sect ------------------------------- */
+
+footer {
+    background-color: #333A44;
+}
+
+footer .logo {
+    color: white;
+}
+
+.footer-nav {
+    display: flex;
+    align-items: center;
+}
+
+.social-media img {
+    margin-left: 25px;
 }
