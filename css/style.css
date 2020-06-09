@@ -1,5 +1,6 @@
-:root {
+/* ------------------------------- variables ------------------------------- */
 
+:root {
     /* main colors */
     --yellow: #FCB72B;
     --dark-navy: #495567;
@@ -16,17 +17,40 @@
     --main-side-padding: 165px;
     --btn-padding: 14px 40px;
 
-    --h2-font-size: 24px;
-
+    --max-width: 1440px;
 }
 
 
+/* ------------------------------- reusable classes ------------------------------- */
+
+.btn {
+    background-color: var(--yellow);
+    padding: var(--btn-padding);
+    color: white;
+    width: max-content;
+}
+
+.p-vertical-spacing {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.h3-vertical-spacing {
+    padding: 40px 0 27px;
+}
+
+.bg-circle-img {
+    border-radius: 50%;
+}
+
+/* ------------------------------- base style ------------------------------- */
+
 body {
-    font-family: 'Lexend Deca', Helvetica, sans-serif;
-    font-size: .9375rem;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
     line-height: 25px;
     color: var(--body-text-color);
-    max-width: 1440px;
+
     margin: 0 auto;
 }
 
@@ -35,11 +59,16 @@ a {
     color: var(--dim-grey);
 }
 
+
+/* ------------------------------- header ------------------------------- */
+
 header {
     display: flex;
     justify-content: space-between;
     padding: 1.375rem var(--main-side-padding);
     align-items: center;
+    max-width: var(--max-width);
+    margin: 0 auto;
 }
 
 nav {
@@ -59,81 +88,85 @@ nav {
     margin-right: 2rem;
 }
 
-.btn {
-    background-color: var(--yellow);
-    padding: var(--btn-padding);
-    color: white;
-    width: max-content;
-}
 
-main {
-    width: 100%;
-    overflow: hidden;
-}
+/* ------------------------------- hero sect ------------------------------- */
 
 .hero {
-    color: white;
     background-image: url(../assets/images/home-hero-desktop.jpg);
     height: 650px;
-    padding: 153px var(--main-side-padding);
-    position: relative;
-   
+    background-position: right top;
+    background-size: cover;
+    padding: 152px var(--main-side-padding);
 }
 
-.hero .content {
-    width: 500px;
-}
-
-.hero p {
-    margin: 40px 0;
+.inner-hero {
+    max-width: calc(var(--max-width) - (var(--main-side-padding) * 2));
+    margin: 0 auto;
 }
 
 h1 {
-    font-family: 'Space Mono', Helvetica, sans-serif;
+    font-family: 'Space Mono', sans-serif;
     font-size: 56px;
-    letter-spacing: -2.5px;
     line-height: 56px;
+    letter-spacing: -2.5px;
+    color: white;
 }
 
-.graphic-elements {
-    display: flex;
+.hero p {
+    color: white;
+}
+
+.hero .graphic-elements {
     position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
     left: 0;
-    bottom: 164px;
-  
 }
 
-.arrow-line {
-    display: flex;
-    width: 1160px;
-    justify-content: space-between;
-    margin-right: 95px;
+.hero .content-block {
+    width: 500px;
 }
 
-.white-circles {
-    height: max-content;
-    align-self: end;
-    margin-bottom: 1rem;
-}
 
-.shifted-text-block {
-    margin-left: 95px;
-}
+/* ------------------------------- process sect ------------------------------- */
 
-.white-circles {
-    align-self: end;
-    margin-bottom: 1rem;
-}
-
-.three-step-process {
+.process {
     padding: 160px var(--main-side-padding) 200px;
+}
+
+
+/* ------------------------------- steps sect ------------------------------- */
+
+.steps {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
 }
 
+h3 {
+    font-size: 24px;
+    font-family: 'Space Mono', sans-serif;
+    color: var(--dark-navy);
+}
+
+
+/* ------------------------------- telemetry sect ------------------------------- */
+
+.telemetry {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 h2 {
-    font-family: 'Space Mono', Helvetica, sans-serif;
-    font-size: var(--h2-font-size);
-    
+    font-size: 48px;
+    line-height: 48px;
+    letter-spacing: -2.5px;
+    font-family: 'Space Mono', sans-serif;
+    color: var(--dark-navy);
+}
+
+.telemetry .content-block {
+    width: 445px;
 }
