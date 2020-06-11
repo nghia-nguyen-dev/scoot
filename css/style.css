@@ -106,8 +106,6 @@ a {
 
 /* ------------------------------- header ------------------------------- */
 
-
-
 nav {
     display: flex;
     align-items: center;
@@ -125,8 +123,13 @@ nav {
     margin-right: 2rem;
 }
 
+.hamburger {
+    display: none;
+}
 
 /* ------------------------------- hero sect ------------------------------- */
+
+
 
 .hero {
     background-image: url(../assets/images/home-hero-desktop.jpg);
@@ -134,10 +137,13 @@ nav {
     background-position: right top;
     background-size: cover;
     padding: 152px var(--main-side-padding);
-  
+    position: relative;
+    overflow-x: hidden;
 }
 
-
+.inner-hero {
+    display: flex;
+}
 
 h1 {
     font-family: 'Space Mono', sans-serif;
@@ -151,16 +157,34 @@ h1 {
     color: white;
 }
 
-.hero .graphic-elements {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-}
-
 .hero .content-block {
     width: 500px;
+}
+
+.hero p {
+    padding-left: 95px;
+}
+
+.hero .btn {
+    margin-left: 95px;
+}
+
+.hero .right-arrow {
+    height: max-content;
+    margin-left: 20px;
+    transform: translateY(183px);
+}
+
+.hero .line {
+    position: absolute;
+    left: 0;
+    top: 336px;
+}
+
+.hero .white-circles {
+    position: absolute;
+    right: -40px;
+    bottom: 177px;
 }
 
 
@@ -168,8 +192,11 @@ h1 {
 
 .process {
     padding: 160px var(--main-side-padding) 200px;
-    
+    max-width: 1440px;
+    margin: 0 auto;
+    overflow-x: hidden;
 }
+
 
 
 /* ------------------------------- steps sect ------------------------------- */
@@ -187,11 +214,16 @@ h3 {
     color: var(--dark-navy);
 }
 
+.blue-line {
+    height: 15px;
+    background-color: var(--light-grey);
+    position: absolute;
+}
 
 /* ------------------------------- telemetry sect ------------------------------- */
 
 .telemetry {
- 
+    position: relative;
 }
 
 h2 {
@@ -202,21 +234,61 @@ h2 {
     color: var(--dark-navy);
 }
 
+.telemetry .left-downward-arrow {
+    position: absolute;
+    right: -177px;
+    bottom: 0;
+}
+
+.telemetry .blue-circle {
+    position: absolute;
+    right: -520px;
+}
+
 
 /* ------------------------------- city sect ------------------------------- */
+
+.city {
+    position: relative;
+}
 
 .city .bg-circle-img {
     order: -1;
     margin-right: 30px;
 }
 
+.city .blue-circle {
+    left: -510px;
+    position: absolute;
+}
+
+.city .right-arrow {
+    position: absolute;
+    left: -145px;
+    top: 0;
+}
 
 /* ------------------------------- payments sect ------------------------------- */
+
+.payments {
+    position: relative;
+}
 
 .payments.flex-container {
     margin-bottom: 0;
 }
 
+.payments .blue-circle {
+    position: absolute;
+    right: -500px;
+    z-index: -1;
+}
+
+.payments .left-downward-arrow {
+    position: absolute;
+    right: -554px;
+    top: 90px;
+}
 
 /* ------------------------------- sign-up sect ------------------------------- */
 
@@ -259,4 +331,334 @@ footer .logo {
 
 .social-media img {
     margin-left: 25px;
+}
+
+
+/* ------------------------------- @media ------------------------------- */
+
+@media(max-width: 1400px) {
+
+    .hero {
+        padding-top: 125px;
+    }
+
+    .hero p {
+        padding-left: unset;
+    }
+
+    .hero .btn {
+        margin: 0 auto;
+    }
+
+    .hero .line {
+        display: none;
+    }
+
+    .hero .right-arrow {
+        margin-left: unset;
+        margin-top: 30px;
+        transform: unset;
+        position: absolute;
+        left: 0;
+    }
+
+    .hero .white-circles {
+        /* display: none; */
+        bottom: 116px;
+    }
+
+    .inner-hero {
+        display: unset;
+    }
+
+    .hero .content-block {
+        text-align: center;
+        width: unset;
+    }
+
+}
+
+
+
+@media(max-width: 980px) {
+
+    :root {
+        --main-side-padding: 6vw;
+    }
+
+    .sign-up {
+        padding-top: 62px;
+        padding-bottom: 62px;
+    }
+
+    .sign-up h2 {
+        margin: 0 auto;
+        margin-bottom: 50px;
+    }
+
+    .inner-sign-up {
+        display: unset;
+        text-align: center;
+    }
+
+    .social-media img {
+        margin-left: 15px;
+    }
+
+    .nav-list li {
+        margin-right: 1rem;
+    }
+
+
+    .logo {
+        margin-right: 45px;
+    }
+
+    .payments .content-block,
+    .telemetry .content-block {
+        text-align: center;
+        margin-right: unset;
+        margin-top: 65px;
+    }
+
+    .payments .btn,
+    .city .btn,
+    .telemetry .btn {
+        margin: 0 auto;
+    }
+
+    .payments.flex-container,
+    .telemetry.flex-container {
+        flex-direction: column-reverse;
+    }    
+
+    .payments .left-downward-arrow {
+        right: -405px;
+    }
+
+    .payments .blue-circle {
+        right: -425px;
+    }
+
+    .city.flex-container {
+        flex-direction: column;
+    }
+
+    .city .content-block {
+        text-align: center;
+        margin-top: 65px;
+    }
+
+    .city .blue-circle {
+        left: -425px;
+    }
+
+    .city .bg-circle-img {
+        margin-right: 0;
+    }
+
+    .telemetry .left-downward-arrow {
+        top: 293px;
+    }
+
+    .telemetry .blue-circle {
+        right: -425px;
+    }
+
+    .steps {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .card {
+        display: flex;
+    }
+
+    .icon {
+        height: 96px;
+        margin-right: 45px;
+    }
+
+    .h3-vertical-spacing {
+        padding: 0 0 25px;
+    }
+
+    .text-grp {
+        max-width: 520px;
+    }
+
+    .inner-hero .right-arrow {
+        left: -150px;
+    }
+}
+
+
+
+@media(max-width: 768px) {
+
+    /* ---------------- base ---------------- */
+
+    h2 {
+        font-size: 32px;
+        line-height: 32px;
+        letter-spacing: -1.43px;
+    }
+
+    .telemetry .content-block,
+    .city .content-block,
+    .payments .content-block,
+    .sign-up h2 {
+        width: auto;
+    }
+
+    .flex-container {
+        margin-bottom: 120px;
+    }
+
+    /* ---------------- header ---------------- */
+
+    .hamburger {
+        display: block;
+        position: absolute;
+        left: var(--main-side-padding);
+    }
+
+    .nav-list {
+        display: none;
+    }
+
+    header .btn {
+        display: none;
+    }
+
+    .logo {
+        margin-right: 0;
+    }
+
+    header nav {
+        margin: 0 auto;
+    }
+    
+
+    /* ---------------- hero ---------------- */
+
+    .hero .white-circles {
+        display: none;
+    }
+
+    .hero {
+        padding-top: 115px;
+    }
+
+    h1 {
+        font-size: 40px;
+        line-height: 40px;
+        letter-spacing: -1.5px;
+    }
+
+    .hero .p-vertical-spacing {
+        padding-top: 25px;
+        padding-bottom: 35px;
+    }
+
+    .hero .right-arrow {
+        left: -307px;
+        margin-top: 0;
+    }
+
+
+    /* ---------------- process ---------------- */
+
+    .process {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+
+    .process .card {
+        display: unset;
+        text-align: center;
+    }
+
+    .process .icon {
+        margin-right: 0;
+        margin-bottom: 25px;
+        height: 60px;
+    }
+    .process .steps {
+        margin-bottom: 120px;
+    }
+
+
+    /* ---------------- telemetry ---------------- */
+
+    .telemetry .left-downward-arrow {
+        right: -411px;
+        top: 179px;
+    }
+
+
+    /* ---------------- city ---------------- */
+
+    .city .right-arrow {
+        left: -200px;
+        
+    }
+
+
+    /* ---------------- payments ---------------- */
+
+    .payments .left-downward-arrow {
+        right: -550px;
+        top: 0;
+    }
+
+
+    /* ---------------- sign-up ---------------- */
+
+    .products img {
+        height: 40px;
+    }
+
+    .products img:nth-of-type(1) {
+        margin-right: 10px;
+    }
+
+    /* ---------------- footer ---------------- */
+
+    footer .nav-list {
+        display: block;
+        margin-bottom: 60px;
+    }
+
+    footer .nav-list li {
+        margin-right: 0;
+        margin-bottom: 12px;
+    }
+
+    .inner-footer,
+    .footer-nav {
+        flex-direction: column;
+    }
+
+    footer .nav-list {
+        text-align: center;
+    }
+    
+    .social-media img {
+        margin-left: 0;
+    }
+
+    .social-media img:nth-of-type(2) {
+       margin: 0 1rem;
+    }
+
+    footer .logo {
+        margin-bottom: 25px;
+    }
+
+    .inner-footer {
+        padding-top: 64px;
+        padding-bottom: 88px;
+    }
+
 }
