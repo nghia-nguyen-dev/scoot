@@ -133,12 +133,12 @@ nav {
 
 .hero {
     background-image: url(../assets/images/home-hero-desktop.jpg);
-    height: 650px;
     background-position: right top;
     background-size: cover;
     padding: 152px var(--main-side-padding);
     position: relative;
     overflow-x: hidden;
+    height: 650px;
 }
 
 .inner-hero {
@@ -170,7 +170,7 @@ h1 {
 }
 
 .hero .right-arrow {
-    height: max-content;
+ 
     margin-left: 20px;
     transform: translateY(183px);
 }
@@ -378,12 +378,23 @@ footer .logo {
 
 }
 
+@media(max-width: 1200px) {
 
+    .about-pg .left-downward-arrow {
+        right: -380px;
+    }
+
+}
 
 @media(max-width: 980px) {
 
     :root {
         --main-side-padding: 6vw;
+    }
+
+    .about-pg .telemetry .left-downward-arrow {
+        right: -64px;
+        top: 250px;
     }
 
     .sign-up {
@@ -475,7 +486,7 @@ footer .logo {
     }
 
     .icon {
-        height: 96px;
+        align-self: flex-start;
         margin-right: 45px;
     }
 
@@ -596,6 +607,10 @@ footer .logo {
         top: 179px;
     }
 
+    .about-pg .telemetry .left-downward-arrow {
+        right: -474px;
+        top: 150px;
+    }
 
     /* ---------------- city ---------------- */
 
@@ -659,6 +674,205 @@ footer .logo {
     .inner-footer {
         padding-top: 64px;
         padding-bottom: 88px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+ /* ------------------------------------------- about pg ------------------------------------------- */
+
+
+/* ---------------- hero sect ---------------- */
+
+.about-pg .hero {
+    background-image: url(../assets/images/about-hero-desktop.jpg);
+    background-position: left top;
+    height: unset;
+    padding-top: 72px;
+    padding-bottom: 72px;
+}
+
+.about-pg .white-circles {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.about-pg .left-downward-arrow {
+    bottom: 30px;
+}
+
+
+/* ---------------- our values ---------------- */
+
+
+.md-circle-img {
+    border-radius: 50%;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.our-values .card {
+    padding-top: 30px;
+}
+
+.our-values h2 {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.our-values .card {
+    text-align: center;
+}
+
+.yellow-circle {
+    background-color: var(--yellow);
+    border-radius: 50%;
+    height: 96px;
+    width: 96px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+.number {
+    color: var(--dark-navy);
+    font-size: 24px;
+    line-height: 24px;
+    font-family: 'Space Mono', sans-serif;
+}
+
+.img-wrapper {
+    position: relative;
+    margin-bottom: 80px;
+}
+
+.our-values h3 {
+    margin-bottom: 25px;
+}
+
+
+    @media(max-width: 980px) {
+
+        .cards {
+            grid-template-columns: 1fr;
+            max-width: 445px;
+            margin: 0 auto;
+        }
+        .our-values .card {
+            flex-direction: column;
+        }
+        
+    }
+
+
+
+/* ---------------- FAQs ---------------- */
+
+.faqs {
+    margin-top: 120px;
+}
+
+.faqs p {
+    color: var(--dark-navy);
+}
+
+.faqs h2 {
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+.faqs h3 {
+    line-height: 24px;
+}
+
+.secondary-h2 {
+    font-size: 40px;
+    line-height: 40px;
+    text-align: unset;
+}
+
+.hidden p {
+    display: none;
+}
+
+.hidden .drop-down {
+    margin-bottom: 0;
+}
+
+.sub-section {
+    display: grid;
+    grid-template-columns: 35% 1fr;
+    gap: 30px;
+}
+
+.sub-section:nth-of-type(1) {
+    margin-bottom: 64px;
+}
+
+.drop-down {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.drop-down svg {
+    min-width: 18px;
+    margin-left: 15px;
+}
+
+.question {
+    background-color: var(--light-grey);
+    padding: 32px 40px;
+    margin-bottom: 16px;
+}
+
+.chevron.up {
+    transform: rotate(180deg);
+}
+
+
+@media(max-width: 980px) {
+
+    .sub-section {
+        grid-template-columns: 1fr;
+        gap: unset;
+    }
+
+    .faqs .secondary-h2 {
+        margin-bottom: 32px;
+    }
+}
+
+@media(max-width: 768px) {
+
+    .faqs {
+        margin-top: 145px;
+    }
+
+    .faqs .secondary-h2 {
+        font-size: 24px;
+    }
+
+    .faqs h3 {
+        font-size: 18px;
     }
 
 }
