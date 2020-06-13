@@ -839,7 +839,7 @@ footer .logo {
 }
 
 .question {
-    background-color: var(--light-grey);
+    background-color: var(--snow);
     padding: 32px 40px;
     margin-bottom: 16px;
 }
@@ -873,6 +873,63 @@ footer .logo {
 
     .faqs h3 {
         font-size: 18px;
+    }
+
+}
+
+
+
+
+ /* ------------------------------------------- careers pg ------------------------------------------- */
+
+
+/* ---------------- jobs sect ---------------- */
+
+.job-list {
+    margin-top: 120px;
+}
+
+.job-list .btn {
+    padding: 14px 66px;
+}
+
+.job {
+    background-color: var(--snow);
+    padding: 32px 40px;
+    margin-bottom: 16px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.job-info p {
+    color: var(--dark-navy);
+    margin-top: 8px;
+}
+
+@media(max-width: 768px) {
+
+    .careers .blue-circle {
+        display: none;
+    }
+
+    .job {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .job-info p {
+        margin-top: 4px;
+    }
+
+    .job a,
+    .job .btn {
+        width: 100%;
+    }
+
+    .job-info {
+        margin-bottom: 20px;
     }
 
 }
