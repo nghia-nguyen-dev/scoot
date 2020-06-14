@@ -214,6 +214,7 @@ h3 {
     font-size: 24px;
     font-family: 'Space Mono', sans-serif;
     color: var(--dark-navy);
+    letter-spacing: -1.07px;
 }
 
 .vertical-blue-line {
@@ -415,9 +416,9 @@ footer .logo {
 
 @media(max-width: 980px) {
 
-    :root {
+    /* :root {
         --main-side-padding: 6vw;
-    }
+    } */
 
     .blue-line {
         display: none;
@@ -523,6 +524,7 @@ footer .logo {
     .icon {
         align-self: flex-start;
         margin-right: 45px;
+        min-width: 96px;
     }
 
     .h3-vertical-spacing {
@@ -638,6 +640,10 @@ footer .logo {
 
     .vertical-blue-line {
         display: none;
+    }
+
+    .icon {
+        min-width: unset;
     }
 
     /* ---------------- telemetry ---------------- */
@@ -978,4 +984,63 @@ footer .logo {
         margin-top: 145px;
     }
 
+}
+
+
+
+
+
+
+
+ /* ------------------------------------------- locations pg ------------------------------------------- */
+
+
+
+/* ---------------- hero sect ---------------- */
+
+ .locations-pg .hero {
+    background-image: url(../assets/images/careers-locations-hero-desktop.jpg);
+ }
+
+
+/* ---------------- map sect ---------------- */
+
+.map {
+    padding: 120px var(--main-side-padding);
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.arrow-down {
+    width: 0; 
+    height: 0; 
+    border-left: 16px solid transparent;
+    border-right: 16px solid transparent;
+    
+    border-top: 16px solid var(--yellow);
+    position: absolute;
+
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 100%);
+  }
+
+.yellow-square {
+    height: 72px;
+    width: 189px;
+    background-color: var(--yellow);
+    position: absolute;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.marker-position {
+    position: relative;
+}
+
+.new-york {
+    top: 67px;
+    left: 153px;
 }
