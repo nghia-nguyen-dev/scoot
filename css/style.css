@@ -206,6 +206,8 @@ h1 {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
     margin-bottom: 200px;
+    
+    position: relative;
 }
 
 h3 {
@@ -214,10 +216,28 @@ h3 {
     color: var(--dark-navy);
 }
 
+.vertical-blue-line {
+    display: none;
+
+    width: 15px;
+    height: 90%;
+    position: absolute;
+    z-index: -1;
+    left: 40px;
+    top: 0;
+    background-color: var(--light-grey);
+}
+
 .blue-line {
     height: 15px;
     background-color: var(--light-grey);
     position: absolute;
+
+    top: 40px;
+    left: calc(var(--main-side-padding) * -1);
+    width: 89%;
+    max-width: 960px;
+    z-index: -1;
 }
 
 /* ------------------------------- telemetry sect ------------------------------- */
@@ -295,7 +315,9 @@ h2 {
 .sign-up {
     background-color: var(--dark-navy);
     padding: 102px var(--main-side-padding);
-  
+
+    position: relative;
+    overflow-x: hidden;
 }
 
 .inner-sign-up {
@@ -313,6 +335,11 @@ h2 {
     margin-right: 15px;
 }
 
+.semi-circle {
+    position: absolute;
+    bottom: 0;
+    right: -180px;
+}
 
 /* ------------------------------- footer sect ------------------------------- */
 
@@ -390,6 +417,14 @@ footer .logo {
 
     :root {
         --main-side-padding: 6vw;
+    }
+
+    .blue-line {
+        display: none;
+    }
+
+    .vertical-blue-line {
+        display: block;
     }
 
     .about-pg .telemetry .left-downward-arrow {
@@ -496,6 +531,8 @@ footer .logo {
 
     .text-grp {
         max-width: 520px;
+
+        margin: 0 auto;
     }
 
     .inner-hero .right-arrow {
@@ -599,6 +636,9 @@ footer .logo {
         margin-bottom: 120px;
     }
 
+    .vertical-blue-line {
+        display: none;
+    }
 
     /* ---------------- telemetry ---------------- */
 
@@ -608,7 +648,7 @@ footer .logo {
     }
 
     .about-pg .telemetry .left-downward-arrow {
-        right: -474px;
+        right: -411px;
         top: 150px;
     }
 
@@ -917,6 +957,8 @@ footer .logo {
         flex-direction: column;
         text-align: center;
         align-items: center;
+
+        padding: 36px 32px 32px 32px;
     }
 
     .job-info p {
@@ -930,6 +972,10 @@ footer .logo {
 
     .job-info {
         margin-bottom: 20px;
+    }
+
+    .job-list {
+        margin-top: 145px;
     }
 
 }
