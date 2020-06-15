@@ -29,6 +29,13 @@
     color: white;
     width: max-content;
     font-family: 'Space Mono', sans-serif;
+    transition: .35s ease;
+}
+
+.btn:hover {
+    background-color: unset;
+    outline: 3px solid var(--yellow);
+    color: var(--yellow);
 }
 
 .p-vertical-spacing {
@@ -1115,11 +1122,13 @@ footer .logo {
     left: 0;
     z-index: 100;
     opacity: 0;
-    transition: opacity .4s ease-in;
+    transition: opacity .35s ease-in;
+    pointer-events: none;
 }
 
 .overlay.on {
     opacity: 1;
+   
 }
 
 .side-menu {
@@ -1135,7 +1144,7 @@ footer .logo {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    transition: left .35s ease-in .1s;
+    transition: left .35s ease-in .15s;
 }
 
 .slide-out {
