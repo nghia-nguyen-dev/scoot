@@ -1005,42 +1005,49 @@ footer .logo {
 
 /* ---------------- map sect ---------------- */
 
+.map-img.mobile {
+    display: none;
+}
+
+.cities {
+    display: none;
+}
+
 .map {
     padding: 120px var(--main-side-padding);
     max-width: 1440px;
     margin: 0 auto;
 }
 
-.arrow-down {
-    width: 0; 
-    height: 0; 
-    border-left: 16px solid transparent;
-    border-right: 16px solid transparent;
-    
-    border-top: 16px solid var(--yellow);
-    position: absolute;
+@media(max-width: 768px) {
 
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%, 100%);
-  }
+    .map {
+        padding-top: 72px;
+        padding-bottom: 72px;
+    }
 
-.yellow-square {
-    height: 72px;
-    width: 189px;
-    background-color: var(--yellow);
-    position: absolute;
+    .map-img.desktop {
+        display: none;
+    }
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    .map-img.mobile {
+        display: block;
+        width: 100%;
+    }
 
-.marker-position {
-    position: relative;
-}
+    .cities {
+        display: block;
+        margin-top: 40px;
+    }
 
-.new-york {
-    top: 67px;
-    left: 153px;
+    .cities h3 {
+        padding: 22px 0;
+        background-color: var(--light-yellow);
+        text-align: center;
+        margin-bottom: 16px;
+    }
+
+    .cities h3:last-child {
+        margin-bottom: unset;
+    }
 }
