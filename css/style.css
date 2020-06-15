@@ -28,6 +28,7 @@
     padding: var(--btn-padding);
     color: white;
     width: max-content;
+    font-family: 'Space Mono', sans-serif;
 }
 
 .p-vertical-spacing {
@@ -94,7 +95,6 @@ body {
     font-size: 15px;
     line-height: 25px;
     color: var(--body-text-color);
-
     margin: 0 auto;
 }
 
@@ -567,7 +567,8 @@ footer .logo {
 
     /* ---------------- header ---------------- */
 
-    .hamburger {
+    .hamburger,
+    .close {
         display: block;
         position: absolute;
         left: var(--main-side-padding);
@@ -598,6 +599,7 @@ footer .logo {
 
     .hero {
         padding-top: 115px;
+        text-align: center;
     }
 
     h1 {
@@ -1019,6 +1021,50 @@ footer .logo {
     margin: 0 auto;
 }
 
+.msg-us {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 var(--main-side-padding) 120px;
+
+    display: flex;
+}
+
+.not-listed {
+    display: flex;
+}
+
+.msg-us h2 {
+    padding-right: 30px;
+    min-width: 326px;
+}
+
+.msg-us p {
+    max-width: 590px;
+    padding-right: 90px;
+}
+
+@media(max-width: 1200px) {
+
+    .msg-us {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .msg-us p {
+        padding-right: unset;
+        max-width: 800px;
+        margin: 40px auto;
+    }
+
+    .msg-us .btn {
+        margin: 0 auto;
+    }
+
+    .not-listed {
+        flex-direction: column;
+    }
+}
+
 @media(max-width: 768px) {
 
     .map {
@@ -1050,4 +1096,63 @@ footer .logo {
     .cities h3:last-child {
         margin-bottom: unset;
     }
+
+    .msg-us {
+        padding-bottom: 72px;
+    }
+
+}
+
+
+/* ------------------------------- mobile nav ------------------------------- */
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.75);
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 73px;
+    left: 0;
+    z-index: 100;
+    opacity: 0;
+    transition: opacity .4s ease-in;
+}
+
+.overlay.on {
+    opacity: 1;
+}
+
+.side-menu {
+    position: fixed;
+    width: 70vw;
+    height: calc(100vh - 73px);
+    left: -70vw;
+    bottom: 0;
+    z-index: 200;
+    background-color: #333A44;
+    padding: 65px 15px 35px var(--main-side-padding);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: left .35s ease-in .1s;
+}
+
+.slide-out {
+    left: 0;
+}
+
+
+.side-menu a {
+    color: var(--light-grey);
+}
+
+.side-menu li {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-family: 'Space Mono', sans-serif;
+}
+
+.hide-icon {
+    display: none;
 }
