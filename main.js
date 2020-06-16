@@ -16,6 +16,7 @@ nav.addEventListener('click',(e) => {
     overlay.classList.toggle('on')
 })
 
+// FAQs section paragraph expand + chevron rotation
 chevrons.forEach(chevron => {
     chevron.addEventListener('click', function() {
         const question = this.parentElement.parentElement
