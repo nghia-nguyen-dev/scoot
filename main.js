@@ -9,11 +9,14 @@ const chevrons = [...document.querySelectorAll('.chevron')]
 
 
 // mobile nav functionality
-hamburger.addEventListener('click',(e) => {
-    sideMenu.classList.toggle('slide-out');
-    hamburger.classList.toggle('hide-icon');
-    close.classList.toggle('hide-icon');
-    overlay.classList.toggle('on')
+nav.addEventListener('click',(e) => {
+
+    if(e.target.className === 'hamburger' || e.target.className === 'close') {
+        sideMenu.classList.toggle('slide-out');
+        hamburger.classList.toggle('hide-icon');
+        close.classList.toggle('hide-icon');
+        overlay.classList.toggle('on')
+    }
 })
 
 // FAQs section paragraph expand + chevron rotation
