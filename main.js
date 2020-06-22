@@ -9,7 +9,7 @@ const chevrons = [...document.querySelectorAll('.chevron')]
 
 
 // mobile nav functionality
-nav.addEventListener('click',(e) => {
+hamburger.addEventListener('click',(e) => {
     sideMenu.classList.toggle('slide-out');
     hamburger.classList.toggle('hide-icon');
     close.classList.toggle('hide-icon');
