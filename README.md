@@ -1,2 +1,2 @@
-# scoot
+# scoot website
  coding challenge
